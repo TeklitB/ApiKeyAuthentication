@@ -1,4 +1,4 @@
-﻿namespace ApiKeyAuthen.CustomAttribute.Interfaces
+﻿namespace ApiKeyAuthen.SharedApiKeyValidator.Interfaces
 {
   public interface IApiKeyValidation
   {

@@ -1,4 +1,4 @@
-﻿namespace ApiKeyAuthen.CustomAttribute.Commons
+﻿namespace ApiKeyAuthen.SharedApiKeyValidator
 {
   public static class Constants
   {

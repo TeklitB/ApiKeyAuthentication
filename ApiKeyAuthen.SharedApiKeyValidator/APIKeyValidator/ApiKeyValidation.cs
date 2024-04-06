@@ -1,7 +1,7 @@
-﻿using ApiKeyAuthen.CustomAttribute.Commons;
-using ApiKeyAuthen.CustomAttribute.Interfaces;
+﻿using ApiKeyAuthen.SharedApiKeyValidator.Interfaces;
+using Microsoft.Extensions.Configuration;
 
-namespace ApiKeyAuthen.CustomAttribute.APIKeyValidator
+namespace ApiKeyAuthen.SharedApiKeyValidator.APIKeyValidator
 {
   public class ApiKeyValidation : IApiKeyValidation
   {
@@ -17,6 +17,8 @@ namespace ApiKeyAuthen.CustomAttribute.APIKeyValidator
       if (string.IsNullOrWhiteSpace(appApiKey))
         return false;
 
+      // install Microsoft.Extensions.Configuration.Binder
+      // GetValue is an extension method 
       string apiKey = _config.GetValue<string>(Constants.ApiKeyName);
 
       if (apiKey == null || apiKey != appApiKey)

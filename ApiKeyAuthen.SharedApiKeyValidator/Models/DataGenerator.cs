@@ -1,6 +1,6 @@
 ﻿using Bogus;
 
-namespace ApiKeyAuthen.CustomAttribute.Models
+namespace ApiKeyAuthen.SharedApiKeyValidator.Models
 {
   public static class DataGenerator
   {

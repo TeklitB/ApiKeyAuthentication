@@ -1,10 +1,8 @@
-﻿using ApiKeyAuthen.CustomAttribute.CustomAttributes;
-using ApiKeyAuthen.SharedApiKeyValidator.Models;
+﻿using ApiKeyAuthen.SharedApiKeyValidator.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiKeyAuthen.CustomAttribute.Controllers
+namespace ApiKeyAuthen.CustomMiddle.Controllers
 {
-  [ApiKey]
   [Route("api/[controller]")]
   [ApiController]
   public class UsersController : ControllerBase

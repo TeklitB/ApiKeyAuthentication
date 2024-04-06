@@ -1,5 +1,5 @@
-﻿using ApiKeyAuthen.CustomAttribute.Commons;
-using ApiKeyAuthen.CustomAttribute.Interfaces;
+﻿using ApiKeyAuthen.SharedApiKeyValidator;
+using ApiKeyAuthen.SharedApiKeyValidator.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 

@@ -1,9 +1,10 @@
-using ApiKeyAuthen.CustomAttribute.CustomAttributes;
+
+using ApiKeyAuthen.CustomMiddle.CustomMiddleware;
 using ApiKeyAuthen.SharedApiKeyValidator.APIKeyValidator;
 using ApiKeyAuthen.SharedApiKeyValidator.Interfaces;
 using ApiKeyAuthen.SharedApiKeyValidator.Models;
 
-namespace ApiKeyAuthen.CustomAttribute
+namespace ApiKeyAuthen.CustomMiddle
 {
   public class Program
   {
@@ -16,9 +17,7 @@ namespace ApiKeyAuthen.CustomAttribute
       builder.Services.AddControllers();
       builder.Services.AddEndpointsApiExplorer();
       builder.Services.AddSwaggerGen();
-      builder.Services.AddScoped<IApiKeyValidation, ApiKeyValidation>();
-      builder.Services.AddScoped<ApiKeyAuthFilter>();
-
+      builder.Services.AddSingleton<IApiKeyValidation, ApiKeyValidation>();
 
       var app = builder.Build();
 
@@ -28,6 +27,8 @@ namespace ApiKeyAuthen.CustomAttribute
         app.UseSwagger();
         app.UseSwaggerUI();
       }
+
+      app.UseMiddleware<ApiKeyMiddleware>();
 
       app.UseHttpsRedirection();
 

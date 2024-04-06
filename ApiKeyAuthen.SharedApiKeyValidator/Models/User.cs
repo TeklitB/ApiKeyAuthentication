@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace ApiKeyAuthen.CustomAttribute.Models
+namespace ApiKeyAuthen.SharedApiKeyValidator.Models
 {
   public class User
   {
@@ -8,7 +8,6 @@ namespace ApiKeyAuthen.CustomAttribute.Models
     public string Name { get; set; }
     public string Address { get; set; }
     public DateTime Dob { get; set; }
-
     public string Email { get; set; }
     public bool IsActived
     {
@@ -16,7 +15,9 @@ namespace ApiKeyAuthen.CustomAttribute.Models
     }
     public override string ToString()
     {
-      return JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
+      return JsonSerializer.Serialize(
+        this,
+        new JsonSerializerOptions { WriteIndented = true });
     }
   }
 }
