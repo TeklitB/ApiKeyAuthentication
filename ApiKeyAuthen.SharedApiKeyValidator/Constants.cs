@@ -4,5 +4,6 @@
   {
     public const string ApiKeyHeaderName = "x-api-key";
     public const string ApiKeyName = "ApiKey";
+    public const string ApiKeyPolicy = "ApiKeyPolicy";
   }
 }
